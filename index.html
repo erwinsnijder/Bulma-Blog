@@ -6,21 +6,22 @@
 		<title>Hello Bulma!</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+        <link rel="stylesheet" href="debug.css">
         <style>
-
+            is-paddingless-horizontal { padding-left: 0; padding-right: 0;}
                 .grid {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1r;
+                    grid-template-columns: [xl-start] 1fr [md-start] minmax(0, 624px) [md-end] 1fr [xl-end];
                 }
                 
-                .grid * { grid-column: 2 / 3; }
+                .grid *  { grid-column:md; }
+                .grid-xl { grid-column:xl; }
                 
                         </style>
                     </head>
                     <body>
     
-                        <section class="section">
+                        <section class="section is-paddingless-horizontal">
                             <div class="container grid">
                                 <nav class="breadcrumb" aria-label="breadcrumbs">
                                     <ul>
